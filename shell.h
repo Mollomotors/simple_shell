@@ -32,6 +32,10 @@ int print_alias(list_t *node);
 int _myalias(info_t *info);
 
 // functions from sh_memory
-int bfree(void **ptr)
+int bfree(void **ptr);
+  
+// fnction from exercise 6
+int _getline(info_t *info, char **ptr, size_t *length);
+void sigintHandler(__attribute__((unused))int sig_num);
 
 #endif
