@@ -147,6 +147,7 @@ int build_history_list(info_t *info, char *buf, int linecount);
 void remove_comments(char *);
 int _putchar(char c);
 void _puts(char *str);
+char *convert_number(long int, int, int);
 
 
 /*functions from _realloc.c */
