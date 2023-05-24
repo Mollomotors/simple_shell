@@ -139,9 +139,10 @@ ssize_t get_node_index(list_t *, list_t *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 
-/* functions from comment_errors */
+
+/* function from re_useable1 */
+void _eputs(char *);
+int build_history_list(info_t *info, char *buf, int linecount);
 void remove_comments(char *);
 
-/* function from eput_errors */
-void _eputs(char *);
 #endif
