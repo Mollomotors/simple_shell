@@ -163,10 +163,14 @@ int find_builtin(info_t *);
 void find_cmd(info_t *);
 void free_info(info_t *, int);
 
-/*functions from _realloc.c */
+
+/*functions from realloc */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
+/*functions from token */
+char **strtow(char *, char *);
+char **strtow2(char *, char);
 
 #endif
