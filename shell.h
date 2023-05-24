@@ -145,4 +145,7 @@ void print_error(info_t *, char *);
 int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
+
+/* function from eput_errors */
+void _eputs(char *);
 #endif
