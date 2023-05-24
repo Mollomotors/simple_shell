@@ -1,6 +1,5 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -33,16 +32,13 @@
 
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
-
 extern char **environ;
-
 typedef struct liststr
 {
 	int num;
 	char *str;
 	struct liststr *next;
 } list_t;
-
 typedef struct passinfo
 {
 	char *arg;
@@ -65,11 +61,9 @@ typedef struct passinfo
 	int readfd;
 	int histcount;
 } info_t;
-
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
-
 typedef struct builtin
 {
 	char *type;
@@ -155,5 +149,4 @@ void *_realloc(void *, unsigned int, unsigned int);
 /*functions from token */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
-
 #endif
