@@ -49,7 +49,7 @@ char *_strncat(char *dest, const char *src, size_t n)
 		i++;
 		k++;
 	}
-	if (k < n)
+	if (k < int (n))
 		dest[i] = '\0';
 	return (s);
 }
