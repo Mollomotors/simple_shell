@@ -409,3 +409,36 @@ char *_getenv(info_t *info, const char *name)
 	}
 	return (NULL);
 }
+/* function from enviro */
+int _myenv(info_t *info)
+{
+	print_list_str(info->env);
+	return (0);
+}
+
+void set_info(info_t *info, char **av)
+{
+	int i = 0;
+
+	info->fname = av[0];
+	if (info->arg)
+	{
+		info->argv = strtow(info->arg, " \t");
+		if (!info->argv)
+		{
+
+			info->argv = malloc(sizeof(char *) * 2);
+			if (info->argv)
+			{
+				info->argv[0] = _strdup(info->arg);
+				info->argv[1] = NULL;
+			}
+		}
+		for (i = 0; info->argv && info->argv[i]; i++)
+			;
+		info->argc = i;
+
+		replace_alias(info);
+		replace_vars(info);
+	}
+}
