@@ -1,9 +1,5 @@
 #include "shell.h"
 
-/**
- * _copyenv - Creates a copy of the environment.
- * Return: If an error occurs - NULL.
- */
 char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
