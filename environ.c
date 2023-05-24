@@ -56,7 +56,7 @@ void free_env(void)
  * _getenv - Gets an environmental variable from the PATH.
  * @var: The name of the environmental variable to get.
  */
-char **_getenv(const char *var)
+char *_getenv(info_t *, const char *)
 {
 	int index, len;
 
