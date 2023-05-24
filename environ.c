@@ -1,13 +1,13 @@
 #include "shell.h"
 
- // _myenv - prints the current environment
+ /* _myenv - prints the current environment */
 int _myenv(info_t *info)
 {
 	print_list_str(info->env);
 	return (0);
 }
 
- //  _getenv - gets the value of an environ variable
+ /*  _getenv - gets the value of an environ variable */
 
 char *_getenv(info_t *info, const char *name)
 {
