@@ -8,6 +8,10 @@ char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
 
+/**
+ * _getenv
+ * return (new_environ)
+ */
 char **_copyenv(void)
 {
 	char **new_environ;
