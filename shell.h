@@ -150,6 +150,7 @@ void _puts(char *str);
 char *convert_number(long int, int, int);
 char *_strdup(const char *);
 int _eputchar(char c);
+int populate_env_list(info_t *info);
 
 
 /*functions from _realloc.c */
