@@ -143,59 +143,59 @@ void *_realloc(void *, unsigned int, unsigned int);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-/*string1.c */
+/*string1 */
 char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
-/* memory.c */
+/* memory */
 int bfree(void **);
 
-/* getinfo.c */
+/* getinfo */
 void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
-/* history.c */
+/* history */
 char *get_history_file(info_t *info);
 int write_history(info_t *info);
 int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
-/* vars.c */
+/* vars */
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
 
-/* errors1.c */
+/* errors1 */
 int _erratoi(char *);
 void print_error(info_t *, char *);
 int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
-/* environ.c */
+/* environ */
 char *_getenv(info_t *, const char *);
 int _myenv(info_t *);
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
-/* getenv.c */
+/* getenv */
 char **get_environ(info_t *);
 int _unsetenv(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 
-/* loop.c */
+/* loop */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
-* error.c */
+/* error */
 void _eputs(char *);
 int _eputchar(char);
 int _putfd(char c, int fd);
