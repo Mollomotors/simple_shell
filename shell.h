@@ -12,7 +12,6 @@
 #include <fcntl.h>
 #include <errno.h>
 
-
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
@@ -67,7 +66,6 @@ typedef struct passinfo
 	int histcount;
 } info_t;
 
-
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
@@ -104,7 +102,6 @@ ssize_t get_input(info_t *);
 int _getline(info_t *info, char **ptr, size_t *length);
 void sigintHandler(__attribute__((unused))int sig_num);
 
-
 /* functions from vars */
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
@@ -140,7 +137,6 @@ ssize_t get_node_index(list_t *, list_t *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 
-
 /* function from re_useable1 */
 void _eputs(char *);
 int build_history_list(info_t *info, char *buf, int linecount);
@@ -150,7 +146,6 @@ void _puts(char *str);
 char *convert_number(long int, int, int);
 char *_strdup(const char *);
 int _eputchar(char c);
-
 
 /*functions from realloc */
 char *_memset(char *, char, unsigned int);
