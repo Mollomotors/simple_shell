@@ -4,7 +4,8 @@
  * _strlen - returns the length of a string
  * Return: integer length of string
  */
-int _strlen(char *s)
+
+int _strlen(const char *s);
 {
 	int i = 0;
 
@@ -51,7 +52,7 @@ char *starts_with(const char *haystack, const char *needle)
  * _strcat - concatenates two strings
  * Return: pointer to destination buffer
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, const char *src);
 {
 	char *ret = dest;
 
