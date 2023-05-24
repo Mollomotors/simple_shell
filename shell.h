@@ -116,6 +116,7 @@ int _strlen(const char *s);
 char *_strcat(char *dest, const char *src);
 char *_strncat(char *dest, const char *src, int n);
 char *_strcpy(char *dest, const char *src);
+char *_strncpy(char *, char *, int);
 char *_strchr(char *s, char c);
 int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
