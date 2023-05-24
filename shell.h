@@ -122,7 +122,6 @@ int _myenv(info_t *);
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
-print_list_str(info->env);
 
 
 #endif
