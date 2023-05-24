@@ -1,4 +1,4 @@
-include "shell.h"
+#include "shell.h"
 
 /**
  * _erratoi - converts a string to an integer
@@ -80,6 +80,10 @@ int print_d(int input, int fd)
 
 /**
  * convert_number - converter function, a clone of itoa
+ * @num: number
+ * @base: base
+ * @flags: argument flags
+ *
  * Return: string
  */
 char *convert_number(long int num, int base, int flags)
@@ -110,12 +114,6 @@ char *convert_number(long int num, int base, int flags)
 	return (ptr);
 }
 
-/**
- * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
- *
- * Return: Always 0;
- */
 void remove_comments(char *buf)
 {
 	int i;
