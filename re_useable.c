@@ -55,3 +55,17 @@ int _putchar(char c)
 		buf[i++] = c;
 	return (1);
 }
+
+/* function from string1 */
+void _puts(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
