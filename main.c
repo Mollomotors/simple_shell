@@ -5,14 +5,17 @@
  * @ac: argument count
  * @av: argument vector
  *
- * Return: 0 on sucess, 1 on error
+ * Return: 0 on success, 1 on error
  */
 int main(int ac, char **av)
 {
 	info_t info[] = { INFO_INIT };
 	int fd = 2;
 
-	fd = fd + 3;
+	asm ("mov %1, %0\n\t"
+			"add $3, %0"
+			: "=r" (fd)
+			: "r" (fd));
 
 	if (ac == 2)
 	{
@@ -20,7 +23,7 @@ int main(int ac, char **av)
 		if (fd == -1)
 		{
 			if (errno == EACCES)
-				return (exit(126));
+				exit(126);
 			if (errno == ENOENT)
 			{
 				_eputs(av[0]);
@@ -28,17 +31,14 @@ int main(int ac, char **av)
 				_eputs(av[1]);
 				_eputchar('\n');
 				_eputchar(BUF_FLUSH);
-				return ((exit)(127));
+				exit(127);
 			}
 			return (EXIT_FAILURE);
 		}
 		info->readfd = fd;
 	}
-
 	populate_env_list(info);
 	read_history(info);
 	hsh(info, av);
-
 	return (EXIT_SUCCESS);
 }
-
