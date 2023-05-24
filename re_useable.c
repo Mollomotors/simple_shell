@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /* remove_comments function */
 void remove_comments(char *buf)
 {
