@@ -34,7 +34,7 @@ char *_strncpy(char *dest, char *src, int n)
 	return (s);
 }
 
-char *_strncat(char *dest, const char *src, size_t n)
+char *_strncat(char *dest, const char *src, int n)
 {
 	int i, k;
 	char *s = dest;
@@ -43,13 +43,13 @@ char *_strncat(char *dest, const char *src, size_t n)
 	k = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[k] != '\0' && k < int(n))
+	while (src[k] != '\0' && k < n)
 	{
 		dest[i] = src[k];
 		i++;
 		k++;
 	}
-	if (k < int (n))
+	if (k < n)
 		dest[i] = '\0';
 	return (s);
 }
