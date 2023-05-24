@@ -149,6 +149,7 @@ int _putchar(char c);
 void _puts(char *str);
 char *convert_number(long int, int, int);
 char *_strdup(const char *);
+int _eputchar(char c);
 
 
 /*functions from _realloc.c */
