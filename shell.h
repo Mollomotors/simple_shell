@@ -158,10 +158,13 @@ int write_history(info_t *info);
 int read_history(info_t *info);
 int renumber_history(info_t *info);
 void set_info(info_t *, char **);
+void clear_info(info_t *);
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void free_info(info_t *, int);
+char *_getenv(info_t *, const char *);
+
 
 
 /*functions from realloc */
