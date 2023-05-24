@@ -144,5 +144,6 @@ char *starts_with(const char *, const char *);
 void _eputs(char *);
 int build_history_list(info_t *info, char *buf, int linecount);
 void remove_comments(char *);
+int _putchar(char c);
 
 #endif
