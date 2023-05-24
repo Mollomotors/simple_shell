@@ -148,6 +148,7 @@ void remove_comments(char *);
 int _putchar(char c);
 void _puts(char *str);
 char *convert_number(long int, int, int);
+char *_strdup(const char *);
 
 
 /*functions from _realloc.c */
