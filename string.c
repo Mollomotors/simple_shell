@@ -52,7 +52,7 @@ char *starts_with(const char *haystack, const char *needle)
  * _strcat - concatenates two strings
  * Return: pointer to destination buffer
  */
-char *_strcat(char *dest, const char *src);
+char *_strcat(char *dest, const char *src)
 {
 	char *ret = dest;
 
