@@ -10,26 +10,46 @@
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
+
+/* for read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
+
+/* for command chaining */
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
+
+/* for convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
+
+/* 1 if using system getline() */
 #define USE_GETLINE 0
 #define USE_STRTOK 0
+
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
+
 extern char **environ;
+
+/**
+ * struct liststr - singly linked list
+ * @num: the number field
+ */
 typedef struct liststr
 {
 	int num;
 	char *str;
 	struct liststr *next;
 } list_t;
+
+/**
+ *@arg: a string generated from getline containing arguements
+ *@argv: an array of strings generated from arg
+ */
 typedef struct passinfo
 {
 	char *arg;
@@ -46,19 +66,28 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
+	
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
 } info_t;
+
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
+
+/**
+ *struct builtin - contains a builtin string and related function
+ *@type: the builtin command flag
+ */
 typedef struct builtin
 {
 	char *type;
 	int (*func)(info_t *);
 } builtin_table;
+
+/* functions from files */
 int interactive(info_t *info);
 int _isalpha(int c);
 int is_delim(char c, char *delim);
@@ -114,4 +143,5 @@ void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
+
 #endif
