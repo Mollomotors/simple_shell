@@ -59,28 +59,22 @@ typedef struct builtin
 	char *type;
 	int (*func)(info_t *);
 } builtin_table;
-/*functions from sh_atoi */
 int interactive(info_t *info);
 int _isalpha(int c);
 int is_delim(char c, char *delim);
 int _atoi(char *s);
-/* functions from sh_builtin1 */
 int _myexit(info_t *info);
 int _mycd(info_t *info);
 int _myhelp(info_t *info);
 int _myhistory(info_t *info);
-/* functions from sh_builtin2 */
 int unset_alias(info_t *info, char *str);
 int set_alias(info_t *info, char *str);
 int print_alias(list_t *node);
 int _myalias(info_t *info);
-/* functions from sh_memory */
-int bfree(void **ptr);  
-/* fnction from getline (exercise 6) */
+int bfree(void **ptr);   
 ssize_t get_input(info_t *);
 int _getline(info_t *info, char **ptr, size_t *length);
 void sigintHandler(__attribute__((unused))int sig_num);
-/* functions from vars */
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
@@ -95,22 +89,18 @@ char *_strchr(char *s, char c);
 int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
 int _strncmp(const char *s1, const char *s2, size_t n);
-/*  functions fron lists */
 list_t *add_node(list_t **, const char *, int);
 list_t *add_node_end(list_t **, const char *, int);
 size_t print_list_str(const list_t *);
 int delete_node_at_index(list_t **, unsigned int);
 void free_list(list_t **);
-/* functions from lists1 */
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
 list_t *node_starts_with(list_t *, char *, char);
 ssize_t get_node_index(list_t *, list_t *);
-/*  fnctions from string.c */
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
-/* function from re_useable1 */
 void _eputs(char *);
 int build_history_list(info_t *info, char *buf, int linecount);
 void remove_comments(char *);
@@ -119,11 +109,9 @@ void _puts(char *str);
 char *convert_number(long int, int, int);
 char *_strdup(const char *);
 int _eputchar(char c);
-/*functions from realloc */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
-/*functions from token */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 #endif
