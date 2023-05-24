@@ -10,7 +10,6 @@
  *@n: the amount of characters to be copied
  *Return: the concatenated string
  */
- 
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i, k;
@@ -33,7 +32,6 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	return (s);
 }
-
 char *_strncat(char *dest, const char *src, int n)
 {
 	int i, k;
@@ -53,7 +51,6 @@ char *_strncat(char *dest, const char *src, int n)
 		dest[i] = '\0';
 	return (s);
 }
-
 char *_strchr(char *s, char c)
 {
 	do {
