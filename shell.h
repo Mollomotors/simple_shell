@@ -153,7 +153,15 @@ int _eputchar(char c);
 int populate_env_list(info_t *info);
 int read_history(info_t *info);
 int hsh(info_t *info, char **av);
-
+char *get_history_file(info_t *info);
+int write_history(info_t *info);
+int read_history(info_t *info);
+int renumber_history(info_t *info);
+void set_info(info_t *, char **);
+int hsh(info_t *, char **);
+int find_builtin(info_t *);
+void find_cmd(info_t *);
+void free_info(info_t *, int);
 
 /*functions from _realloc.c */
 char *_memset(char *, char, unsigned int);
