@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * is_chain - test if current char in buffer is a chain delimeter
+ * is_chain - test if current char in buffer is a chain delimeter 
  */
 
 int is_chain(info_t *info, char *buf, size_t *p)
