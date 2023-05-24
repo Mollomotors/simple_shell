@@ -152,6 +152,7 @@ char *_strdup(const char *);
 int _eputchar(char c);
 int populate_env_list(info_t *info);
 int read_history(info_t *info);
+int hsh(info_t *info, char **av);
 
 
 /*functions from _realloc.c */
