@@ -99,7 +99,7 @@ int unset_alias(info_t *info, char *str);
 int set_alias(info_t *info, char *str);
 int print_alias(list_t *node);
 int _myalias(info_t *info);
-int bfree(void **ptr);   
+int bfree(void **ptr);
 ssize_t get_input(info_t *);
 int _getline(info_t *info, char **ptr, size_t *length);
 void sigintHandler(__attribute__((unused))int sig_num);
