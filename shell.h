@@ -146,4 +146,11 @@ int build_history_list(info_t *info, char *buf, int linecount);
 void remove_comments(char *);
 int _putchar(char c);
 
+
+/*functions from _realloc.c */
+char *_memset(char *, char, unsigned int);
+void ffree(char **);
+void *_realloc(void *, unsigned int, unsigned int);
+
+
 #endif
