@@ -7,13 +7,14 @@
 char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
+
 char **_copyenv(void)
 {
 	char **new_environ;
 	size_t size;
 	int index;
 	for (size = 0; environ[size]; size++);
-		new_environ = malloc(sizeof(char *) * (size + 1));
+	new_environ = malloc(sizeof(char *) * (size + 1));
 	if (!new_environ)
 		return (NULL);
 	for (index = 0; environ[index]; index++)
@@ -31,10 +32,6 @@ char **_copyenv(void)
 	new_environ[index] = NULL;
 	return (new_environ);
 }
-
-/**
- * free_env - Frees the the environment copy.
- */
 void free_env(void)
 {
 	int index;
