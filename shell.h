@@ -74,4 +74,12 @@ char *_strncpy(char *dest, char *src, int n);
 char *_strncat(char *dest, char *src, int n);
 char *_strchr(char *s, char c);
 
+// functions from vars (exercise 2)
+int is_chain(info_t *, char *, size_t *);
+void check_chain(info_t *, char *, size_t *, size_t, size_t);
+int replace_alias(info_t *);
+int replace_vars(info_t *);
+int replace_string(char **, char *);
+
+
 #endif
