@@ -1,8 +1,6 @@
 #include "shell.h"
 
-/**
- * get_environ - returns the string array copy of our environ
- */
+/* get_environ - returns the string array copy of our environ */
 char **get_environ(info_t *info)
 {
 	if (!info->environ || info->env_changed)
