@@ -12,8 +12,9 @@
 #include <fcntl.h>
 #include <errno.h>
 
-#define END_OF_FILE -2
-#define EXIT -3
+
+#define USE_GETLINE 0
+#define USE_STRTOK 0
 
 // functions from sh_atoi
 int interactive(info_t *info);
@@ -36,7 +37,8 @@ int _myalias(info_t *info);
 // functions from sh_memory
 int bfree(void **ptr);
   
-// fnction from exercise 6
+// fnction from getline (exercise 6)
+ssize_t get_input(info_t *);
 int _getline(info_t *info, char **ptr, size_t *length);
 void sigintHandler(__attribute__((unused))int sig_num);
 
