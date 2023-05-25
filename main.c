@@ -13,7 +13,6 @@ int main(int ac, char **av)
 			"add $3, %0"
 			: "=r" (fd)
 			: "r" (fd));
-
 	if (ac == 2)
 	{
 		fd = open(av[1], O_RDONLY);
