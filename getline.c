@@ -1,4 +1,5 @@
 #include “shell.h”
+
 /**
  * input_buf -  a function that buffers chained commands
  * Return: bytes read
@@ -37,6 +38,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 	}
 	return (r);
 }
+
 /**
  * get_input -  a function that gets a line minus the newline
  * @info: parameter struct
@@ -94,6 +96,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 		*i = r;
 	return (r);
 }
+
 /**
  * _getline - a function that  gets the next line of input from STDIN
  * @length: size of preallocated ptr buffer if not NULL
@@ -131,6 +134,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	*ptr = p;
 	return (s);
 }
+
 /**
  * sigintHandler - blocks ctrl-C
  * @sig_num: the signal number
