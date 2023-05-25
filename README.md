@@ -1,1 +1,1 @@
- this is a group project for simple_shell project for the AlX software engineering course
+0x16. C - Simple Shell
