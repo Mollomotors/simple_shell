@@ -32,7 +32,6 @@
 
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
-
 extern char **environ;
 
 /**
@@ -71,7 +70,6 @@ typedef struct passinfo
 	int readfd;
 	int histcount;
 } info_t;
-
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
